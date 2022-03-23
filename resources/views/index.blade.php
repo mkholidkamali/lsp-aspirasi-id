@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark mt-5 shadow-lg">
+<div class="p-4 p-md-5 mb-4 text-white rounded bg-dark mt-5 shadow-sm">
     <div class="row">
         <div class="col-md-6 px-0">
             <h1 class="display-4 fst-italic">ASPIRASI MASYARAKAT</h1>
@@ -9,7 +9,7 @@
             <a href="#form" class="btn btn-secondary btn-lg">Tulis</a>
         </div>
         <div class="col-md-6 d-flex justify-content-end">
-            <img src="/img/test.png" style="max-width: 300px" alt="">
+            <img src="/img/test.png" style="max-width: 300px">
         </div>
     </div>
 </div>
@@ -17,7 +17,7 @@
 <div class="row mb-2">
     <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
+            <div class="col p-4 d-flex flex-column position-static bg-white">
                 <strong class="d-inline-block mb-2 text-primary">World</strong>
                 <h3 class="mb-0">Featured post</h3>
                 <div class="mb-1 text-muted">Nov 12</div>
@@ -38,7 +38,7 @@
     </div>
     <div class="col-md-6">
         <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
+            <div class="col p-4 d-flex flex-column position-static bg-white">
                 <strong class="d-inline-block mb-2 text-success">Design</strong>
                 <h3 class="mb-0">Post title</h3>
                 <div class="mb-1 text-muted">Nov 11</div>
@@ -63,24 +63,21 @@
 
     <div class="col-md-3">
         <div class="position-sticky" style="top: 2rem;">
-            <div class="p-4 mb-3 bg-light rounded">
+            <div class="p-4 mb-3 rounded bg-white shadow-sm">
                 <h4 class="fst-italic">About</h4>
                 <p class="mb-0">Customize this section to tell your visitors a little bit about your
                     publication, writers, content, or something else entirely. Totally up to you.</p>
             </div>
 
             <div class="p-4">
-                <h4 class="fst-italic">Archives</h4>
-                <ol class="list-unstyled mb-0">
-                    <li><a href="#">March 2021</a></li>
-                </ol>
+                <div class="alert alert-success mx-auto mt-4" role="alert">
+                    Berhasil
+                </div>
             </div>
-
             <div class="p-4">
-                <h4 class="fst-italic">Elsewhere</h4>
-                <ol class="list-unstyled">
-                    <li><a href="#">GitHub</a></li>
-                </ol>
+                <div class="alert alert-danger mx-auto mt-4" role="alert">
+                    Gagal
+                </div>
             </div>
         </div>
     </div>
@@ -98,9 +95,9 @@
             <hr>
         </article>
 
-        <div class="card">
+        <div class="card shadow-sm" style="margin-top: 3rem; margin-bottom: 5rem">
             <div class="card-body">
-                <h1>Formulir Aspirasi</h1>
+                <h1 class="text-center">Formulir Aspirasi</h1>
                 <hr>
                 <form action="/aspirasi/create" method="post" id="form">
                     @csrf

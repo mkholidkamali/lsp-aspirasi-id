@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AspirasiController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,11 @@ Route::get('/profile', function () {
 
 // Aspirasi
 Route::post('/aspirasi/create', [AspirasiController::class, 'create']);
+
+// Admin
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
+// Development
+Route::get('/admin/index', function () {
+    return view('admin.index');
+});

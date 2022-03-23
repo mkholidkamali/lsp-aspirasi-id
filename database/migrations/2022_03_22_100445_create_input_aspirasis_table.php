@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('input_aspirasis', function (Blueprint $table) {
-            $table->id();
-            $table->integer('id_pelaporan')->length(5);
+            // $table->id();
+            $table->increments('id_pelaporan')->length(5);
             $table->integer('nik')->length(16);
             $table->integer('id_kategori')->length(5);
             $table->string('lokasi')->length(50);
